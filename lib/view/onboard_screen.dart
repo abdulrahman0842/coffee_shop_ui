@@ -1,6 +1,5 @@
 import 'package:coffee_shop_ui/view/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class OnboardScreen extends StatelessWidget {
   const OnboardScreen({super.key});
