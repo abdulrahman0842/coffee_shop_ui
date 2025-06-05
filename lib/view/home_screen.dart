@@ -31,28 +31,28 @@ class _HomeScreenState extends State<HomeScreen> {
             BottomNavigationBar(items: [
           BottomNavigationBarItem(
               icon: Image.asset(
-                'assets/images/Home.png',
+                'assets/images/icons/Home.png',
                 height: 28,
                 width: 28,
               ),
               label: "Home"),
           BottomNavigationBarItem(
               icon: Image.asset(
-                'assets/images/Shop.png',
+                'assets/images/icons/Shop.png',
                 height: 24,
                 width: 24,
               ),
               label: "Buy"),
           BottomNavigationBarItem(
               icon: Image.asset(
-                'assets/images/Favorite.png',
+                'assets/images/icons/Favorite.png',
                 height: 24,
                 width: 24,
               ),
               label: "Favorite"),
           BottomNavigationBarItem(
               icon: Image.asset(
-                'assets/images/Notification.png',
+                'assets/images/icons/Notification.png',
                 height: 24,
                 width: 24,
               ),

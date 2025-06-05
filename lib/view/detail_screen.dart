@@ -7,6 +7,18 @@ class DetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: SafeArea(
+          child: Column(children: [
+        Row(
+          children: [
+            Image.asset("assets/images/icons/backIcon.png"),
+            Text("Details",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            Image.asset("assets/images/icons/Favorite.png")
+          ],
+        )
+      ])),
+    );
   }
 }
