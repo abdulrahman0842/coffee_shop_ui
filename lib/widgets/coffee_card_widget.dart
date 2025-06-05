@@ -3,17 +3,9 @@ import 'package:flutter/material.dart';
 class CoffeeCardWidget extends StatelessWidget {
   const CoffeeCardWidget({
     super.key,
-    required this.imgSrc,
-    required this.name,
-    required this.subName,
-    required this.price,
-    required this.rating,
+    required this.coffee,
   });
-  final String imgSrc;
-  final String name;
-  final String subName;
-  final double price;
-  final double rating;
+  final Map<String,dynamic> coffee;
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -33,7 +25,7 @@ class CoffeeCardWidget extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(18),
                     image: DecorationImage(
-                        fit: BoxFit.cover, image: AssetImage(imgSrc))),
+                        fit: BoxFit.cover, image: AssetImage(coffee["imgSrc"]))),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -42,7 +34,7 @@ class CoffeeCardWidget extends StatelessWidget {
                       color: Color(0xffFFD700),
                     ),
                     Text(
-                      "$rating",
+                      coffee['rating'].toString(),
                       style: TextStyle(
                           fontSize: 15,
                           color: Colors.white,
@@ -51,11 +43,11 @@ class CoffeeCardWidget extends StatelessWidget {
                   ],
                 )),
             Text(
-              name,
+              coffee['name'],
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             Text(
-              subName,
+              coffee['subname'],
               style: TextStyle(
                   fontSize: 17,
                   fontWeight: FontWeight.w300,
@@ -65,7 +57,7 @@ class CoffeeCardWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "\$ $price",
+                  "\$ ${coffee['prince']}",
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
                 Container(

@@ -140,11 +140,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         childAspectRatio: 0.65),
                     itemBuilder: (context, index) {
                       return CoffeeCardWidget(
-                        imgSrc: coffeeList[index]["imgSrc"],
-                        name: coffeeList[index]["name"],
-                        subName: coffeeList[index]["subname"],
-                        price: coffeeList[index]["price"],
-                        rating: coffeeList[index]["rating"],
+                        coffee: coffeeList[index],
                       );
                     })
               ],
