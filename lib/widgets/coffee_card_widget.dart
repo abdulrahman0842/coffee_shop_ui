@@ -28,32 +28,35 @@ class CoffeeCardWidget extends StatelessWidget {
             spacing: 2,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                  alignment: Alignment.topRight,
-                  padding: EdgeInsets.only(top: 6, left: 97),
-                  height: MediaQuery.of(context).size.height * 0.2,
-                  width: MediaQuery.of(context).size.height * 0.2,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(18),
-                      image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage(coffee["imgSrc"]))),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.star_rate_rounded,
-                        color: Color(0xffFFD700),
-                      ),
-                      Text(
-                        coffee['rating'].toString(),
-                        style: TextStyle(
-                            fontSize: 15,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold),
-                      )
-                    ],
-                  )),
+              Hero(
+                tag: coffee["imgSrc"],
+                child: Container(
+                    alignment: Alignment.topRight,
+                    padding: EdgeInsets.only(top: 6, left: 97),
+                    height: MediaQuery.of(context).size.height * 0.2,
+                    width: MediaQuery.of(context).size.height * 0.2,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(18),
+                        image: DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage(coffee["imgSrc"]))),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.star_rate_rounded,
+                          color: Color(0xffFFD700),
+                        ),
+                        Text(
+                          coffee['rating'].toString(),
+                          style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
+                        )
+                      ],
+                    )),
+              ),
               Text(
                 coffee['name'],
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),

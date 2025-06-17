@@ -1,5 +1,4 @@
 import 'package:coffee_shop_ui/core/theme.dart';
-import 'package:coffee_shop_ui/view/home_screen.dart';
 import 'package:coffee_shop_ui/view/onboard_screen.dart';
 import 'package:flutter/material.dart';
 
